@@ -1,0 +1,12 @@
+services:
+  update-poller:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: update-poller:latest
+    container_name: update-poller
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    env_file:
+      - .env
