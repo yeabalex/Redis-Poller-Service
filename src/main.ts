@@ -19,7 +19,11 @@ async function bootstrap() {
 
   const port = configService.get<number>('PORT', 3000);
   await app.listen(port);
-  console.log(`HTTP + WebSocket server listening on port ${port} (WS path: /ws)`);
+  console.log(
+    `HTTP + WebSocket server listening on port ${port} (WS path: /ws)`,
+  );
 }
 
-bootstrap();
+bootstrap().catch((err) => {
+  console.error('Error during bootstrap:', err);
+});

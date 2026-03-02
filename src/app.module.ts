@@ -5,10 +5,10 @@ import { TopTracksModule } from './top-tracks/top-tracks.module.js';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      isGlobal: true,     // ConfigService available everywhere
+      isGlobal: true, // ConfigService available everywhere
       envFilePath: '.env',
     }),
     TopTracksModule,
   ],
 })
-export class AppModule { }
+export class AppModule {}

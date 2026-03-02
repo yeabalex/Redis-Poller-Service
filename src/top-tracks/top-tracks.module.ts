@@ -5,8 +5,8 @@ import { TopTracksGateway } from './top-tracks.gateway.js';
 import { TopTracksController } from './top-tracks.controller.js';
 
 @Module({
-    imports: [RedisModule],
-    providers: [TopTracksService, TopTracksGateway],
-    controllers: [TopTracksController],
+  imports: [RedisModule],
+  providers: [TopTracksService, TopTracksGateway],
+  controllers: [TopTracksController],
 })
-export class TopTracksModule { }
+export class TopTracksModule {}
